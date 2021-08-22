@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+ Struts Configuration 2.1//EN"   
+"http://struts.apache.org/dtds/struts-2.1.dtd">  
+
+<struts>
+	<package name="abc" extends="struts-default">
+		<action name="Login">
+			<result>login.jsp</result>
+		</action>
+		
+		<action name="loginprocess" class="com.struts.Practice.Login">
+			<result name="success">loginsuccess.jsp</result>
+			<result name="error">loginerror.jsp</result>
+		</action>
+		
+		<action name="logout" class="com.struts.Practice.Login" method="logout">
+			<result name="success">logoutsuccess.jsp</result>
+		</action>
+		
+		<action name="profile" class="com.struts.Practice.Profile">
+			<result name="success">profilesuccess.jsp</result>
+			<result name="error">profileerror.jsp</result>
+		</action>
+	</package>
+</struts>
